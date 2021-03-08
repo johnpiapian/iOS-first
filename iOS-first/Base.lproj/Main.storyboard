@@ -11,7 +11,7 @@
         <!--Home-->
         <scene sceneID="OB3-FR-Z4X">
             <objects>
-                <viewController id="c4V-gf-veU" customClass="ViewController" customModule="iOS_first" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="c4V-gf-veU" customClass="ViewController" customModule="iOS_first" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uDh-kM-353">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,6 +24,14 @@
                                     <segue destination="GyS-F8-TaG" kind="show" id="jeu-v9-c4V"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWy-1I-pMD">
+                                <rect key="frame" x="173" y="256" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chapter 7"/>
+                                <connections>
+                                    <segue destination="BsD-mb-umx" kind="show" id="1gi-WB-Hmi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jbo-uv-i1K"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -34,10 +42,64 @@
             </objects>
             <point key="canvasLocation" x="410.14492753623193" y="26.785714285714285"/>
         </scene>
+        <!--Chapter 7-->
+        <scene sceneID="zEA-aG-2qB">
+            <objects>
+                <viewController title="Chapter 7" id="BsD-mb-umx" customClass="ViewController" customModule="iOS_first" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3B9-v2-rLf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is a label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNd-8h-r06">
+                                <rect key="frame" x="104" y="135" width="206" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dNr-By-Z3e">
+                                <rect key="frame" x="107" y="736" width="200" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGz-F2-8TD">
+                                <rect key="frame" x="169" y="194" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="changeCh7Label:" destination="BsD-mb-umx" eventType="touchUpInside" id="I7z-Mt-Gm3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnq-tx-B0p">
+                                <rect key="frame" x="124" y="688" width="167" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Display Password">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="displayPassword:" destination="BsD-mb-umx" eventType="touchUpInside" id="LFX-z8-s12"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4h6-iT-16v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chapter 7" id="bgj-OV-16Z"/>
+                    <connections>
+                        <outlet property="ch7Label" destination="VNd-8h-r06" id="K3A-of-Lqz"/>
+                        <outlet property="ch7TextField" destination="dNr-By-Z3e" id="gQm-p4-Gu0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOi-aB-bt5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1279.7101449275362" y="293.97321428571428"/>
+        </scene>
         <!--Chapter 6-->
         <scene sceneID="Zdj-yy-zRt">
             <objects>
-                <viewController id="GyS-F8-TaG" sceneMemberID="viewController">
+                <viewController title="Chapter 6" id="GyS-F8-TaG" customClass="ViewController" customModule="iOS_first" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bdL-Dz-dVW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dO0-vg-ffY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166.6666666666667" y="26.785714285714285"/>
+            <point key="canvasLocation" x="1281" y="-364"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qTr-Ws-Msa">
@@ -90,6 +152,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
