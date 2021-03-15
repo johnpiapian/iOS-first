@@ -32,6 +32,14 @@
                                     <segue destination="BsD-mb-umx" kind="show" id="1gi-WB-Hmi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aat-RX-9m7">
+                                <rect key="frame" x="173" y="294" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chapter 8"/>
+                                <connections>
+                                    <segue destination="tHU-gV-Ut5" kind="show" id="UWa-Kq-gb6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jbo-uv-i1K"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -94,7 +102,132 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOi-aB-bt5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1279.7101449275362" y="293.97321428571428"/>
+            <point key="canvasLocation" x="1571" y="-93"/>
+        </scene>
+        <!--Chapter 8-->
+        <scene sceneID="d3m-9Q-VSm">
+            <objects>
+                <viewController id="tHU-gV-Ut5" userLabel="Chapter 8" customClass="ViewController" customModule="iOS_first" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O0I-eb-Aa3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="jbI-jO-YEg">
+                                <rect key="frame" x="190" y="262" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperChanged:" destination="tHU-gV-Ut5" eventType="valueChanged" id="YNY-Rc-dVb"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mt-Lp-OPP">
+                                <rect key="frame" x="130" y="262" width="52" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73L-1A-v0y">
+                                <rect key="frame" x="138" y="304" width="138" height="30"/>
+                                <state key="normal" title="Change Stepper"/>
+                                <connections>
+                                    <action selector="changeStepper:" destination="tHU-gV-Ut5" eventType="touchUpInside" id="nur-7N-aej"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="18K-pk-U4Q">
+                                <rect key="frame" x="70" y="390" width="274" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="18L-nA-dbJ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="tHU-gV-Ut5" eventType="valueChanged" id="7IS-no-sfi"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dx4-ra-Zbz">
+                                <rect key="frame" x="114" y="435" width="187" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRO-i7-uLV">
+                                <rect key="frame" x="150" y="476" width="114" height="30"/>
+                                <state key="normal" title="Change Slider"/>
+                                <connections>
+                                    <action selector="changeSlider:" destination="tHU-gV-Ut5" eventType="touchUpInside" id="oD8-iJ-6cp"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Pre-8y-UPM">
+                                <rect key="frame" x="197" y="151" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pw1-fw-xIa">
+                                <rect key="frame" x="192" y="179" width="30" height="30"/>
+                                <state key="normal" title="Run"/>
+                                <connections>
+                                    <action selector="runButton:" destination="tHU-gV-Ut5" eventType="touchUpInside" id="e7v-aa-LbE"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="nrf-OT-vec">
+                                <rect key="frame" x="160" y="645" width="94" height="32"/>
+                                <connections>
+                                    <action selector="progressStepperChanged:" destination="tHU-gV-Ut5" eventType="valueChanged" id="RDk-PW-Lf2"/>
+                                </connections>
+                            </stepper>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hLW-3Q-GG2">
+                                <rect key="frame" x="132" y="621" width="150" height="4"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKm-Cb-H5K">
+                                <rect key="frame" x="186" y="582" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4pZ-xf-MIM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="18K-pk-U4Q" firstAttribute="top" secondItem="73L-1A-v0y" secondAttribute="bottom" constant="56" id="2qn-l2-yTs"/>
+                            <constraint firstItem="3Mt-Lp-OPP" firstAttribute="leading" secondItem="4pZ-xf-MIM" secondAttribute="leading" constant="130" id="31b-ZD-hgb"/>
+                            <constraint firstItem="dx4-ra-Zbz" firstAttribute="leading" secondItem="4pZ-xf-MIM" secondAttribute="leading" constant="114" id="3fx-fH-Mu1"/>
+                            <constraint firstItem="73L-1A-v0y" firstAttribute="top" secondItem="3Mt-Lp-OPP" secondAttribute="bottom" constant="10" id="5OR-3J-eeH"/>
+                            <constraint firstItem="hLW-3Q-GG2" firstAttribute="centerX" secondItem="nrf-OT-vec" secondAttribute="centerX" id="AZo-Xq-es0"/>
+                            <constraint firstItem="3Mt-Lp-OPP" firstAttribute="top" secondItem="4pZ-xf-MIM" secondAttribute="top" constant="174" id="DmE-G3-mhe"/>
+                            <constraint firstItem="3Mt-Lp-OPP" firstAttribute="bottom" secondItem="jbI-jO-YEg" secondAttribute="bottom" id="EMg-7S-wOL"/>
+                            <constraint firstItem="jbI-jO-YEg" firstAttribute="leading" secondItem="3Mt-Lp-OPP" secondAttribute="trailing" constant="8" id="HsU-5P-nRi"/>
+                            <constraint firstItem="xKm-Cb-H5K" firstAttribute="centerX" secondItem="hLW-3Q-GG2" secondAttribute="centerX" id="J5q-lj-cL1"/>
+                            <constraint firstItem="4pZ-xf-MIM" firstAttribute="trailing" secondItem="jbI-jO-YEg" secondAttribute="trailing" constant="130" id="JI2-78-HH6"/>
+                            <constraint firstItem="3Mt-Lp-OPP" firstAttribute="top" secondItem="jbI-jO-YEg" secondAttribute="top" id="OKh-3y-LFg"/>
+                            <constraint firstItem="pw1-fw-xIa" firstAttribute="centerX" secondItem="73L-1A-v0y" secondAttribute="centerX" id="Pj4-Ac-cXu"/>
+                            <constraint firstItem="pw1-fw-xIa" firstAttribute="top" secondItem="Pre-8y-UPM" secondAttribute="bottom" constant="8" id="SxB-Ks-8o4"/>
+                            <constraint firstItem="wRO-i7-uLV" firstAttribute="centerX" secondItem="xKm-Cb-H5K" secondAttribute="centerX" id="Ty5-On-LKC"/>
+                            <constraint firstItem="nrf-OT-vec" firstAttribute="top" secondItem="hLW-3Q-GG2" secondAttribute="bottom" constant="20" id="XMD-FT-zV3"/>
+                            <constraint firstItem="wRO-i7-uLV" firstAttribute="leading" secondItem="4pZ-xf-MIM" secondAttribute="leading" constant="150" id="YgP-i1-CdE"/>
+                            <constraint firstItem="18K-pk-U4Q" firstAttribute="leading" secondItem="4pZ-xf-MIM" secondAttribute="leading" constant="72" id="bf2-ct-oT1"/>
+                            <constraint firstItem="xKm-Cb-H5K" firstAttribute="top" secondItem="wRO-i7-uLV" secondAttribute="bottom" constant="76" id="dfe-ha-dcO"/>
+                            <constraint firstItem="wRO-i7-uLV" firstAttribute="top" secondItem="dx4-ra-Zbz" secondAttribute="bottom" constant="20" id="gII-AH-Xgg"/>
+                            <constraint firstItem="18K-pk-U4Q" firstAttribute="centerX" secondItem="dx4-ra-Zbz" secondAttribute="centerX" id="iio-BN-bYC"/>
+                            <constraint firstItem="hLW-3Q-GG2" firstAttribute="top" secondItem="xKm-Cb-H5K" secondAttribute="bottom" constant="18" id="nlM-64-j4h"/>
+                            <constraint firstItem="dx4-ra-Zbz" firstAttribute="centerX" secondItem="wRO-i7-uLV" secondAttribute="centerX" id="oJW-q7-pYg"/>
+                            <constraint firstItem="Pre-8y-UPM" firstAttribute="centerX" secondItem="pw1-fw-xIa" secondAttribute="centerX" id="ooG-NH-Exf"/>
+                            <constraint firstItem="Pre-8y-UPM" firstAttribute="top" secondItem="4pZ-xf-MIM" secondAttribute="top" constant="63" id="p6g-5c-ZXB"/>
+                            <constraint firstItem="dx4-ra-Zbz" firstAttribute="top" secondItem="18K-pk-U4Q" secondAttribute="bottom" constant="16" id="pGI-vv-TLw"/>
+                            <constraint firstItem="hLW-3Q-GG2" firstAttribute="leading" secondItem="4pZ-xf-MIM" secondAttribute="leading" constant="132" id="pIa-JU-OLQ"/>
+                            <constraint firstItem="73L-1A-v0y" firstAttribute="centerX" secondItem="18K-pk-U4Q" secondAttribute="centerX" id="wXj-lf-Edo"/>
+                            <constraint firstItem="Pre-8y-UPM" firstAttribute="centerX" secondItem="O0I-eb-Aa3" secondAttribute="centerX" id="ygN-YV-srL"/>
+                            <constraint firstItem="73L-1A-v0y" firstAttribute="leading" secondItem="4pZ-xf-MIM" secondAttribute="leading" constant="138" id="zZk-fT-gkf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chapter 8" id="K1m-D5-wsb"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Pre-8y-UPM" id="ghz-58-3AS"/>
+                        <outlet property="progressLabel" destination="xKm-Cb-H5K" id="7zE-lS-qDi"/>
+                        <outlet property="progressStepper" destination="nrf-OT-vec" id="OY5-oM-5La"/>
+                        <outlet property="progressView" destination="hLW-3Q-GG2" id="dFN-9a-Q7l"/>
+                        <outlet property="sliderLabel" destination="dx4-ra-Zbz" id="0CA-hS-RC2"/>
+                        <outlet property="sliderValue" destination="18K-pk-U4Q" id="BWu-UG-PNN"/>
+                        <outlet property="stepperLabel" destination="3Mt-Lp-OPP" id="dzb-Za-wp2"/>
+                        <outlet property="stepperValue" destination="jbI-jO-YEg" id="oXO-Qd-eET"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQn-E4-pQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1569.5652173913045" y="551.11607142857144"/>
         </scene>
         <!--Chapter 6-->
         <scene sceneID="Zdj-yy-zRt">
@@ -130,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dO0-vg-ffY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1281" y="-364"/>
+            <point key="canvasLocation" x="1570" y="-735"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qTr-Ws-Msa">
