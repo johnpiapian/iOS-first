@@ -32,6 +32,14 @@
                                     <segue destination="BsD-mb-umx" kind="show" id="1gi-WB-Hmi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aat-RX-9m7">
+                                <rect key="frame" x="173" y="294" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chapter 8"/>
+                                <connections>
+                                    <segue destination="tHU-gV-Ut5" kind="show" id="UWa-Kq-gb6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jbo-uv-i1K"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -94,7 +102,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOi-aB-bt5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1279.7101449275362" y="293.97321428571428"/>
+            <point key="canvasLocation" x="1571" y="-93"/>
+        </scene>
+        <!--Chapter 8-->
+        <scene sceneID="d3m-9Q-VSm">
+            <objects>
+                <viewController id="tHU-gV-Ut5" userLabel="Chapter 8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O0I-eb-Aa3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4pZ-xf-MIM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="K1m-D5-wsb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQn-E4-pQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1570" y="687"/>
         </scene>
         <!--Chapter 6-->
         <scene sceneID="Zdj-yy-zRt">
@@ -130,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dO0-vg-ffY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1281" y="-364"/>
+            <point key="canvasLocation" x="1570" y="-852"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qTr-Ws-Msa">
