@@ -40,6 +40,14 @@
                                     <segue destination="tHU-gV-Ut5" kind="show" id="UWa-Kq-gb6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXP-bJ-dkm">
+                                <rect key="frame" x="173" y="332" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chapter 9"/>
+                                <connections>
+                                    <segue destination="KGD-6B-SPP" kind="show" id="uGD-gT-0gz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jbo-uv-i1K"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -102,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOi-aB-bt5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1571" y="-93"/>
+            <point key="canvasLocation" x="1633" y="-581"/>
         </scene>
         <!--Chapter 8-->
         <scene sceneID="d3m-9Q-VSm">
@@ -227,7 +235,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQn-E4-pQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569.5652173913045" y="551.11607142857144"/>
+            <point key="canvasLocation" x="1632" y="81"/>
+        </scene>
+        <!--Chapter 9-->
+        <scene sceneID="NkJ-gn-Zda">
+            <objects>
+                <viewController id="KGD-6B-SPP" customClass="Chapter9_ViewController" customModule="iOS_first" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Txf-Vq-ERN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2516025.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="CCA-Dx-BwX">
+                                <rect key="frame" x="26" y="183" width="362" height="239"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R9m-Zs-zGS">
+                                <rect key="frame" x="26" y="446" width="362" height="217"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Nr-ne-IUl">
+                                <rect key="frame" x="100" y="671" width="85" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Editable"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="KGD-6B-SPP" eventType="touchUpInside" id="A55-NY-DRf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vh-m4-qby">
+                                <rect key="frame" x="206" y="671" width="109" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clickable link"/>
+                                <connections>
+                                    <action selector="clickableButton:" destination="KGD-6B-SPP" eventType="touchUpInside" id="Rev-Pa-bso"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ice-BQ-Oot"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chapter 9" id="gma-2Z-aCz"/>
+                    <connections>
+                        <outlet property="buttonObject" destination="3Nr-ne-IUl" id="E2S-Ca-FS9"/>
+                        <outlet property="clickableLink" destination="7vh-m4-qby" id="xbo-Yw-70E"/>
+                        <outlet property="imageView" destination="CCA-Dx-BwX" id="DiY-N4-KXZ"/>
+                        <outlet property="textView" destination="R9m-Zs-zGS" id="fah-AB-ScT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8U-rK-6OD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631.8840579710147" y="789.50892857142856"/>
         </scene>
         <!--Chapter 6-->
         <scene sceneID="Zdj-yy-zRt">
@@ -263,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dO0-vg-ffY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1570" y="-735"/>
+            <point key="canvasLocation" x="1633" y="-1222"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qTr-Ws-Msa">
@@ -283,6 +344,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="2516025.jpeg" width="2848" height="4288"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
